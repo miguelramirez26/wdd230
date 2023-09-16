@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Test Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Miguel Ramirez - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="Explore Miguel Ramirez's WWDD 230 - Web Frontend Development">
+    <meta name="author" content="Miguel A. Ramirez">
+    <link rel="stylesheet" href="styles/base.css">
 </head>
-
 <body>
-    <h1>Test Page</h1>
-    <p>This is a paragraph.</p>
-</body>
+    <header>
+        <img src="images/profile_image.jpg.jpg" alt="Miguel Ramirez"
+        width="200" height="200">
+        <h1>Miguel A. Ramirez</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="chamber/siteplan.html">Site Plan</a></li>
+            <li><a href="chamber/" target="_blank">Chamber</a></li>
+            <li><a href="https://www.byui.edu" target="_blank">BYU-Idaho</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>WDD 230:Web Frontend Development</h2>
+        <section class="card">
+            <h3>Learning Activities</h3>
+            <ul>
+                <li><a href="#">01: <u>Holy Layout</u> | <u>JS Pen</u></a></li>
+                <li><a href="#">02: <u>Media Query</u> | <u>Design Principles Document</u></a></li>
+                <li><a href="#">03:</a></li>
+                <li><a href="#">04:</a></li>
+                <li><a href="#">05:</a></li>
+                <li><a href="#">06:</a></li>
+                <li><a href="#">07:</a></li>
+                <li><a href="#">08:</a></li>
+                <li><a href="#">09:</a></li>
+                <li><a href="#">10:</a></li>
+            </ul>
+        </section>
 
+        <section class="card">
+            <h3>Information</h3>
+            <p>Location: [Location Information]</p>
+            <p>Weather: [Weather Information]</p>
+            <p>Visits: [Number of Visits]</p>
+        </section>
+    </main>
+    <footer>
+        <p>&#169; <span id="currentYear"></span>
+            <p>👨‍💻 Miguel Angel Ramirez 👨‍💻</p>
+            <p><span class="country">Spain</span> <img src="images/spain_flag.webp" alt="Spain Flag" width="70" height="auto"></p>
+        </p>
+        <p class="last-modification">Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+</body>
 </html>
