@@ -38,10 +38,16 @@ nav ul li a {
 }
 
 /* Main section */
+.main-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 main h2 {
     text-align: center;
     border-bottom: 1px solid lightgray;
-    width: 98%;
+    width: 97%;
     margin: 0 auto;
     padding: 15px;
     padding-bottom: 5px;
