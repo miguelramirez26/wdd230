@@ -1,0 +1,42 @@
+@media screen and (min-width: 640px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    .card {
+        flex: 1;
+    }
+
+    .card:nth-child(1) {
+        width: auto;
+    }
+
+    .card:nth-child(2) {
+        width: auto;
+    }
+
+    .footer-content {
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-content p {
+        padding: 0 5px;
+    }
+
+    .footer-content img {
+        padding-left: 10px;
+    }
+}

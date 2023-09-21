@@ -7,28 +7,36 @@ body {
 header {
     background-color: rgb(29 77 114);
     color: white;
+    padding: 10px;
+    text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
 }
 
 /* Header image */
 header img {
-    margin-right: 50px;
+    padding: 10px;
     width: 200px;
     height: auto;
+}
+
+/* Header text */
+header h1 {
+    padding: 20px;
 }
 
 /* Nav section */
 nav {
     background-color: black;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    text-align: center;
+    padding: 1px 0;
+}
+
+nav ul {
+    padding: 0;
+    justify-content: space-evenly;
 }
 
 nav ul li {
-    text-align: center;
     padding: 10px;
     font-size: 20px;
 }
@@ -50,7 +58,7 @@ main h2 {
     border-bottom: 1px solid lightgray;
     width: 97%;
     margin: 0 auto;
-    padding: 15px;
+    padding: 15px 0;
     padding-bottom: 5px;
 }
 
@@ -83,7 +91,7 @@ main h2 {
 
 ul li {
     list-style-type: none;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 a u {
@@ -92,7 +100,11 @@ a u {
 }
 
 p {
-   text-align: center; 
+   text-align: center;
+}
+
+.columns {
+    display: flex;
 }
 
 /* Footer */

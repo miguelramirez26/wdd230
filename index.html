@@ -3,7 +3,6 @@
 <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Miguel Ramirez - WDD 230 - Web Frontend Development</title>
@@ -15,6 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.google.com/search?q=vitoria-gasteiz&tbm=isch&ved=2ahUKEwjG983tu7mBAxXVkicCHSJnDMUQ2-cCegQIABAA&oq=vitoria-gasteiz&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgQIABAeMgQIABAeMgQIABAeMgQIABAeMgQIABAeOgQIIxAnULUEWOESYJUUaAFwAHgAgAFviAGRCJIBAzEuOZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=zwoLZYbUGdWlnsEPos6xqAw&bih=759&biw=756&rlz=1C5CHFA_enES1002ES1002#imgrc=hB2sG9Ut6RQVPM">
     <meta property="og:url" content="https://miguelramirez26.github.io/wdd230/index.html">
+    <link rel="stylesheet" href="styles/larger.css">
 </head>
 <body>
     <header>
@@ -32,33 +32,54 @@
     </nav>
     <main class="main-content">
         <h2>WDD 230:Web Frontend Development</h2>
-        <section class="card">
-            <h3>Learning Activities</h3>
-            <ul>
-                <li><a href="lesson01/holygrail.html">01: <u>Holy Layout</u> | <u>JS Pen</u></a></li>
-                <li><a href="lesson02/design.html">02: <u>Media Query</u> | <u>Design Principles Document</u></a></li>
-                <li><a href="#">03:</a></li>
-                <li><a href="#">04:</a></li>
-                <li><a href="#">05:</a></li>
-                <li><a href="#">06:</a></li>
-                <li><a href="#">07:</a></li>
-                <li><a href="#">08:</a></li>
-                <li><a href="#">09:</a></li>
-                <li><a href="#">10:</a></li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h3>Information</h3>
-            <p>Location: [Location Information]</p>
-            <p>Weather: [Weather Information]</p>
-            <p>Visits: [Number of Visits]</p>
-        </section>
+        <div class="card-container">
+            <section class="card">
+                <h3>Learning Activities</h3>
+                <div class="columns">
+                    <div class="column">
+                        <ul>
+                            <li><a href="lesson01/holygrail.html">01: <u>Holy Layout</u></a></li>
+                            <li><a href="lesson01/media-query.html">02: <u>Media Query</u></a></li>
+                            <li><a href="#">03: <u>link 03</u></a></li>
+                            <li><a href="#">04: <u>link 04</u></a></li>
+                            <li><a href="#">05: <u>link 05</u></a></li>
+                            <li><a href="#">06: <u>link 06</u></a></li>
+                            <li><a href="#">07: <u>link 07</u></a></li>
+                            <li><a href="#">08: <u>link 08</u></a></li>
+                            <li><a href="#">09: <u>link 09</u></a></li>
+                            <li><a href="#">10: <u>link 10</u></a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li><a href="#"><u>JS Pen</u></a></li>
+                            <li><a href="lesson02/design.html"><u>Design Principles Document</u></a></li>
+                            <li><a href="#"><u>link 13</u></a></li>
+                            <li><a href="#"><u>link 14</u></a></li>
+                            <li><a href="#"><u>link 15</u></a></li>
+                            <li><a href="#"><u>link 16</u></a></li>
+                            <li><a href="#"><u>link 17</u></a></li>
+                            <li><a href="#"><u>link 18</u></a></li>
+                            <li><a href="#"><u>link 19</u></a></li>
+                            <li><a href="#"><u>link 20</u></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="card">
+                <h3>Information</h3>
+                <p>Location: [Location Information]</p>
+                <p>Weather: [Weather Information]</p>
+                <p>Visits: [Number of Visits]</p>
+            </section> 
+        </div>
     </main>
     <footer>
-        <p>&#169; <span id="currentYear"></span></p>
-        <p>👨‍💻 Miguel Angel Ramirez 👨‍💻</p>
-        <p><span class="country">Spain <img src="images/spain_flag.webp" alt="Spain Flag"></span></p>
+        <div class="footer-content">
+            <p>&#169; <span id="currentYear"></span></p>
+            <p>👨‍💻 Miguel Angel Ramirez 👨‍💻</p>
+            <p><span class="country">Spain <img src="images/spain_flag.webp" alt="Spain Flag"></span></p>
+        </div>
         <p class="last-modification">Last Modification: <span id="lastModified"></span></p>
     </footer>    
     <script src="scripts/getdates.js"></script>
