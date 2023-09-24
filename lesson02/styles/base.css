@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #0b1f31;
+    color: white;
+    display: flex; /* Flexbox layout for centering content */
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    margin: 30px 0 5px;
+}
+
+header h2 {
+    margin: 5px 0 30px;
+}
+
+main {
+     /* Maximum width and centering content horizontally */
+    max-width: 1600px;
+    margin: 0 auto;
+    /* Creating a grid layout with three columns */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    /* Border and border-radius for card */
+    border: 1.5px solid rgb(170 170 170);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0 20px;
+    background-color: #eeeeee;
+}
+
+/* Styling for card headers */
+.card h3 {
+    background-color: #3a4958;
+    color: white;
+    margin: 0;
+    padding: 10px 10px;
+    /* Rounded corners for top of the card */
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.card p {
+    padding: 0 15px; 
+    margin-top: 10px; 
+}
+
+.card a {
+    padding: 0 15px;  
+}
+
+.card p:nth-child(2) {
+    margin-bottom: 15px;  /* Extra margin below the second paragraph */
+}
+
+.card .card-img {
+    padding: 0 7px; /* Padding for left and right sides of the card image */
+}
+
+.card img {
+    /* Making images responsive and adding a border */
+    width: 100%;
+    height: auto;
+    border: 1.5px solid rgb(170 170 170);
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+footer {
+    background-color: #0b1f31;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px; 
+    padding: 15px;
+    font-size: 18px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer p:nth-child(2) {
+    /* Adding left and right borders and extra padding */
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    padding: 0 10px;
+}
