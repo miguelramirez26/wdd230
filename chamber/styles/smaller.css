@@ -61,6 +61,7 @@
         top: 5.2rem;
         right: 0;
         width: 100%;
+        z-index: 1;
     }
 
     nav ul {
@@ -96,6 +97,10 @@
 
     ul li {
         font-size: 0.6rem;
+    }
+
+    .card-container .card {
+        margin: 15px;
     }
 
     .card {
@@ -135,7 +140,7 @@
     
     .floating-element {
         position: absolute;
-        top: 20%;
+        top: 30%;
         left: 20%;
         transform: translate(-50%, -50%);
         background-color: rgba(0, 0, 0, 1);
@@ -159,5 +164,15 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+
+    /* Dark mode */
+    #mode {
+        position: absolute;
+        top: 3.5rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 1;
     }
 }

@@ -97,7 +97,6 @@ nav li a:hover {
 .main-content {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 main h2 {
@@ -161,6 +160,11 @@ main h2 {
 .card {
     border: 1.5px solid lightgray;
     margin: 15px 0;
+    padding: 20px;
+}
+
+.card-review {
+    padding: 0 15px 20px;
 }
 
 .card-review .card:nth-child(1) {
@@ -247,4 +251,12 @@ footer > p:last-child {
 
 span#currentYear::after {
     content: "\00a0";
+}
+
+#mode {
+	position: absolute;
+	top: 5.5rem;
+	right: 2.2rem;
+	font-size: 2rem;
+	cursor: pointer;
 }
