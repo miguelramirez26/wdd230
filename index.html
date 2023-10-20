@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <link rel="stylesheet" href="styles/normalize.css">
     <meta charset="UTF-8">
@@ -19,7 +20,7 @@
 </head>
 <body>
     <header>
-        <img src="images/profile_image.jpg.jpg" alt="Miguel Ramirez">
+        <img src="images/profile-image.webp" alt="Miguel Ramirez">
         <h1>Miguel A. Ramirez</h1>
     </header>
     <nav>
@@ -33,6 +34,15 @@
         </ul>
     </nav>
     <main class="main-content">
+        <div class="hero">
+            <picture>
+              <source srcset="images/hero-small.webp" media="(max-width: 400px)">
+              <img src="images/hero-large.webp" alt="table setting" width="960">
+            </picture>
+            <div class="herolabel">
+                <p>Spain Madrid Temple</p>
+            </div>
+          </div>
         <h2>WDD 230:Web Frontend Development</h2>
         <div class="card-container">
             <section class="card">
@@ -97,7 +107,7 @@
         <div class="footer-content">
             <p>&#169; <span id="currentYear"></span></p>
             <p>👨‍💻 Miguel Angel Ramirez 👨‍💻</p>
-            <p><span class="country">Spain <img src="images/spain_flag.webp" alt="Spain Flag"></span></p>
+            <p><span class="country">Spain <img src="images/spain-flag.webp" alt="Spain Flag"></span></p>
         </div>
         <p class="last-modification">Last Modification: <span id="lastModified"></span></p>
     </footer>    
