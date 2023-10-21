@@ -11,8 +11,12 @@ header {
     align-items: center;
 }
 
-h1, h2 {
+h1 {
     margin: 0;
+}
+
+#chamberOfCommerce {
+    font-size: 16px;
 }
 
 /* Style all font icons */
@@ -121,7 +125,7 @@ main h2 {
 .floating-element {
     position: absolute;
     top: 15%;
-    left: 10%;
+    left: 20%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 1);
     padding: 10px 20px; 
