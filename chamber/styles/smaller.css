@@ -99,16 +99,16 @@
         font-size: 0.6rem;
     }
 
-    .card-container .card {
-        margin: 15px;
+    .card-container {
+        display: block;
     }
 
     .card {
         border: 1.5px solid lightgray;
     }
 
-    .card-review .card {
-        box-shadow: none;
+    .card-review {
+        display: block;
     }
 
     footer {

@@ -200,8 +200,8 @@ p {
    text-align: center;
 }
 
-.card p:nth-child(5) {
-    color: blue;
+.card:nth-child(1) p:nth-child(5) {
+    color: #007bff;
 }
 
 .columns {

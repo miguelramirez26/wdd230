@@ -8,6 +8,7 @@ let text = document.lastModified;
 const date = new Date(document.lastModified);
 document.querySelector('#lastModified').textContent = text;
 
+// Ham Button
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('nav');
 

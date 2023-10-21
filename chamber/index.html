@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/smaller.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -21,7 +22,7 @@
     <header>
         <div class="left-group">
             <div class="logo">
-                <img src="images/world.png" alt="World">
+                <img src="images/world.webp" alt="World">
             </div>
             <div class="titles">
                 <h1>InnovateSpain</h1>
@@ -46,7 +47,11 @@
     </header>    
     <main class="main-content">
         <div class="wallpaper">
-            <img src="images/alhambra.webp" alt="Spain">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/wdd230-org.webp" alt="Spain" width="1500">
+            </picture>
             <div class="floating-element">
                 <a href="#">Join the Chamber</a>
             </div>
@@ -62,7 +67,9 @@
             <section class="card">
                 <h3>Weather</h3>
                 <p>Location: [Location Information]</p>
-                <p>Weather: [Weather Information]</p>
+                <p>Temperature: <span id="currentTemperature">50</span> ºF</p>
+                <p>Wind Speed: <span id="currentWindSpeed">5.0</span> mph</p>
+                <p id="windChillValue"></p>
                 <p>Visits: [Number of Visits]</p>
             </section>
         </div>
@@ -100,7 +107,7 @@
     <footer>
         <div class="footer-content">
             <div>
-                <img src="images/world.png" alt="World">
+                <img src="images/world.webp" alt="World">
             </div>
             <div class="left-foot">
                 <h2>
@@ -127,5 +134,6 @@
         <p>&#169; <span id="currentYear">InnovateSpain</span>InnovateSpain | Miguel Angel Ramirez | WWD 230 Project | <span class="last-modification">Last Modification: <span id="lastModified"></span></span></p>
     </footer>    
     <script src="scripts/script.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 </html>
