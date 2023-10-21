@@ -28,13 +28,18 @@ modeButton.addEventListener("click", () => {
 		modeButton.textContent = "🔆";
 
 		const cards = document.querySelectorAll(".card-review .card");
+		const cardContainers = document.querySelectorAll(".card-container .card");
 		const h3Elements = document.querySelectorAll(".card h3");
 		cards.forEach(card => {
 			card.style.border = "2px solid lightgray";
 			card.style.margin = "10px";
+			card.style.backgroundColor = "#000"
 		});
 		h3Elements.forEach(h3 => {
 			h3.style.color = "#ffff";
+		});
+		cardContainers.forEach(container => {
+			container.style.backgroundColor = "#000";
 		});
 	} else {
 		main.style.background = "#fff";
@@ -43,12 +48,17 @@ modeButton.addEventListener("click", () => {
 
 		const cards = document.querySelectorAll(".card-review .card");
 		const h3Elements = document.querySelectorAll(".card h3");
+		const cardContainers = document.querySelectorAll(".card-container .card");
 		cards.forEach(card => {
 			card.style.border = "";
 			card.style.margin = "";
+			card.style.backgroundColor = "";
 		});
 		h3Elements.forEach(h3 => {
 			h3.style.color = "";
+		});
+		cardContainers.forEach(container => {
+			container.style.backgroundColor = "";
 		});
 	}
 });
