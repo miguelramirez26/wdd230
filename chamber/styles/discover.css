@@ -106,29 +106,50 @@ footer {
     background-color: rgb(29 77 114);
     color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column; 
-    text-align: center;
     padding: 10px;
 }
 
+footer h2, footer p {
+    text-align: left;
+}
+
 footer p {
-    margin: 5px 0px;
+    margin: 0;
 }
 
 footer img {
     vertical-align: middle;
-    width: 70px;
+    width: 150px;
     height: auto;
 }
 
-.country {
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px;
+.left-foot {
+    padding: 20px;
+    margin-right: 50px;
 }
 
-.last-modification {
-    color: #FFFF00;
+.right-foot {
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.last-child {
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
+    padding: 10px;
+    color: yellow;
+}
+
+span#currentYear::after {
+    content: "\00a0";
+}
+
+#mode {
+	position: absolute;
+	top: 5.5rem;
+	right: 2.2rem;
+	font-size: 2rem;
+	cursor: pointer;
 }

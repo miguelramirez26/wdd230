@@ -83,4 +83,28 @@
     .image-gallery img {
         width: 100%;
     } 
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .left-foot {
+        margin-right: 0;
+    }
+
+    .left-foot h2 {
+        text-align: center;
+    }
+
+    .left-foot p {
+        text-align: center;
+    }
+
+    .right-foot {
+        margin-left: 0;
+    }
+
+    .right-foot p {
+        text-align: center
+    };
 }   
