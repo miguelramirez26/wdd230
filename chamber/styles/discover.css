@@ -59,12 +59,15 @@ nav li a:hover {
 .main-content {
     max-width: 1600px;
     margin: 0 auto;
+    display: grid;
 }
 
 .image-gallery {
     text-align: center;
     padding: 10px;
-    border: 1.5px solid #D3D3D3; 
+    border: 1.5px solid #D3D3D3;
+    display: grid;
+    align-items: center;
 }
 
 .welcome {
