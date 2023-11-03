@@ -35,9 +35,11 @@
             <fieldset> 
                 <legend>User Information</legend>
                 <label class="top">Username: <input type="text" id="username" name="username" required></label>
-                <label class="top" for="password">Password: <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}"></label>
-                <label class="top" for="password-confirm">Confirm Password: <input type="password" id="password-confirm" name="password-confirm" required oninput="checkSame()"></label>
-                <div id="password-mismatch-message" class="error-message">❗️ Passwords DO NOT MATCH.</div>
+                
+                
+                <label class="top">Password: <input type="text" id="keyphrase" name="keyphrase" pattern="[a-zA-Z -]{8,}" placeholder="At least 8 characters long. Only alpha-numeric."></label>
+		        <label class="top">Password Confirmation: <input type="text" id="keyphrase2" name="keyphrase2"></label>
+                                
                 <label class="top">Email: <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address"></label>
                 <label for="r">Page Rating</label>
                 <div id="rangevalue">0</div>

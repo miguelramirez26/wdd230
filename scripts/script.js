@@ -38,24 +38,27 @@ numVisits++;
 localStorage.setItem("numVisits-ls", numVisits)
 
 // PASSWORD
-const p1 = document.getElementById("password");
-const p2 = document.getElementById("password-confirm");
-const message = document.getElementById("password-mismatch-message");
+const kp1 = document.querySelector("#keyphrase");
+const kp2 = document.querySelector("#keyphrase2");
+const message = document.querySelector("#formmessage");
 
-p2.addEventListener("focusout", checkSame);
+kp2.addEventListener("focusout", checkSame);
 
+// This should be refactored.
 function checkSame() {
-    if (p1.value !== p2.value) {
-        message.style.visibility = "show";
-        p2.style.backgroundColor = "#fff0f3";
-        p2.value = "";
-        p2.focus();
-    } else {
-        message.style.display = "none";
-        p2.style.backgroundColor = "#fff";
-        p2.style.color = "#000";
-    }
+	if (kp1.value !== kp2.value) {
+		message.textContent = "❗Passwords DO NOT MATCH!";
+		message.style.visibility = "show";
+		kp2.style.backgroundColor = "#fff0f3";
+		kp2.value = "";
+		kp2.focus();
+	} else {
+		message.style.display = "none";
+		kp2.style.backgroundColor = "#fff";
+		kp2.style.color = "#000";
+	}
 }
+
 
 // RANGE
 const rangevalue = document.getElementById("rangevalue");
