@@ -299,7 +299,9 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
     width: 100%;
     padding: .75rem 0;
     border: 1px solid #ccc;

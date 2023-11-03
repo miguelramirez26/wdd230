@@ -62,3 +62,6 @@ modeButton.addEventListener("click", () => {
 		});
 	}
 });
+
+// Time Stamp
+document.getElementById('timestamp').value = new Date().toUTCString();
