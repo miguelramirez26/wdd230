@@ -44,7 +44,6 @@ const message = document.querySelector("#formmessage");
 
 kp2.addEventListener("focusout", checkSame);
 
-// This should be refactored.
 function checkSame() {
 	if (kp1.value !== kp2.value) {
 		message.textContent = "❗Passwords DO NOT MATCH!";
@@ -58,7 +57,6 @@ function checkSame() {
 		kp2.style.color = "#000";
 	}
 }
-
 
 // RANGE
 const rangevalue = document.getElementById("rangevalue");
