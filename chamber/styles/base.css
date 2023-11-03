@@ -262,3 +262,66 @@ span#currentYear::after {
 	font-size: 2rem;
 	cursor: pointer;
 }
+
+/* --------FORM------- */
+.main-content {
+    text-align: left;
+    margin: 20px;
+}
+
+.main-content h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+form {
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submitBtn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
