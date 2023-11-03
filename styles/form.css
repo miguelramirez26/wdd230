@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    font-family: "Trirong", serif;
+  }
+
+/* Header */
+header {
+    background-color: rgb(29, 77, 114);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+}
+
+/* Header image */
+header img {
+    padding: 10px;
+    width: 200px;
+    height: auto;
+}
+
+/* Header text */
+header h1 {
+    padding: 20px;
+}
+
+/* Nav section */
+nav {
+    background-color: black;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    font-size: 20px;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #bbb;
+    color: #000;
+    font-weight: 700;
+    padding: 4px 3px 4.1px;
+}
+
+/* Main */
+
+/* Global CSS variables */
+:root {
+    --primary-color: #445ba9;
+    --background-color: rgba(0,0,0,0.1);
+    --form-padding: 20px;
+}
+
+form fieldset {
+    margin: 2rem 0;
+    border: 1px solid var(--primary-color);
+    border-radius: .5rem;
+}
+
+form legend {
+    color: var(--primary-color);
+    margin: 0 1rem;
+    padding: 0 .5rem;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+form label.top input {
+    display: block;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem;
+    width: 100%;
+    max-width: 20rem;
+    background-color: var(--background-color);
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid red;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--form-padding);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#r {
+	width: 180px;
+	margin-bottom: 0;
+}
+
+#rangevalue {
+	font-size: 2rem;
+	color: navy;
+}
+
+#rangevalues {
+	display: flex;
+	margin: 0 0 0 25px;
+	width: 200px;
+}
+
+#rangevalues option {
+	flex: 1 1 auto;
+}
+
+input[type=range] {
+    margin: 1rem;
+    padding: .5rem;
+}
+
+form input.submitBtn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 1rem;
+    padding: .75rem 1.5rem;
+    margin: 0 0 1rem;
+    width: 96%;
+    max-width: 20rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(29 77 114);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 5px 0px;
+}
+
+footer img {
+    vertical-align: middle;
+    width: 70px;
+    height: auto;
+}
+
+.country {
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.last-modification {
+    color: yellow;
+}

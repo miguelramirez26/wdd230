@@ -36,3 +36,35 @@ numVisits++;
 
 // 5. Store the new visit total into localStorage
 localStorage.setItem("numVisits-ls", numVisits)
+
+// PASSWORD
+const p1 = document.getElementById("password");
+const p2 = document.getElementById("password-confirm");
+const message = document.getElementById("password-mismatch-message");
+
+p2.addEventListener("focusout", checkSame);
+
+function checkSame() {
+    if (p1.value !== p2.value) {
+        message.style.visibility = "show";
+        p2.style.backgroundColor = "#fff0f3";
+        p2.value = "";
+        p2.focus();
+    } else {
+        message.style.display = "none";
+        p2.style.backgroundColor = "#fff";
+        p2.style.color = "#000";
+    }
+}
+
+// RANGE
+const rangevalue = document.getElementById("rangevalue");
+const range = document.getElementById("r");
+
+// RANGE event listener
+range.addEventListener('change', displayRatingValue);
+range.addEventListener('input', displayRatingValue);
+
+function displayRatingValue() {
+    rangevalue.innerHTML = range.value;
+}

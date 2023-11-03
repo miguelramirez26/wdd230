@@ -1,0 +1,29 @@
+@media screen and (min-width: 640px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    .footer-content {
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-content p {
+        padding: 0 5px;
+    }
+
+    .footer-content img {
+        padding-left: 10px;
+    }
+
+    #menu {
+        display: none;
+    }
+}
