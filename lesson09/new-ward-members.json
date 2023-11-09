@@ -1,0 +1,13 @@
+{
+    "family name" : "Ramirez",
+    "date the family moved into the ward" : "2021-06-16",
+    "number of people in the family (number of records)" : "1",
+    "visited by bishopric?" : "true",
+    "indidual family members" : [
+        {
+            "name" : "Miguel Ramirez",
+            "gender" : "Male",
+            "birthdate" : "1999-09-26"
+        }
+    ]
+}
