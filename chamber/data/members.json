@@ -1,0 +1,31 @@
+{
+    "companies": [
+      {
+        "name": "Apple",
+        "address": "One Apple Park Way, Cupertino, California",
+        "phone": "(208) 631-0640",
+        "websiteurl": "https://www.apple.com/",
+        "imageurl": "",
+        "membershiplevel": 1,
+        "otherinfo": ""
+      },
+      {
+        "name": "Apple",
+        "address": "One Apple Park Way, Cupertino, California",
+        "phone": "(208) 631-0640",
+        "websiteurl": "https://www.apple.com/",
+        "imageurl": "",
+        "membershiplevel": 1,
+        "otherinfo": ""
+      },
+      {
+        "name": "Apple",
+        "address": "One Apple Park Way, Cupertino, California",
+        "phone": "(208) 631-0640",
+        "websiteurl": "https://www.apple.com/",
+        "imageurl": "",
+        "membershiplevel": 1,
+        "otherinfo": ""
+      }
+    ]
+  }
