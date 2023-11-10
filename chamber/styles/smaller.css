@@ -180,4 +180,16 @@
         cursor: pointer;
         z-index: 1;
     }
+
+    /* --- Discovery --- */
+    .list section {
+        display: block;
+        text-align: center;
+    }
+
+    section a {
+        font-size: .7rem;
+        color: navy;
+        letter-spacing: 1.1pt;
+    }
 }
