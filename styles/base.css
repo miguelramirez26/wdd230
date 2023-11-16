@@ -141,6 +141,12 @@ iframe {
     border: 0;
 }
 
+#weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Footer */
 footer {
     background-color: rgb(29 77 114);
