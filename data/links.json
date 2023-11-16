@@ -97,6 +97,10 @@
                 {
                     "url": "lesson08/form-start/index.html",
                     "title": "HTML Forms"
+                },
+                {
+                    "url": "form.html",
+                    "title": "Form Page"
                 }
             ]
         },
@@ -117,8 +121,8 @@
             "lesson": "10",
             "links": [
                 {
-                    "url": "",
-                    "title": "lesson10"
+                    "url": "lesson10/weather.html",
+                    "title": "Weather API"
                 }
             ]
         }
