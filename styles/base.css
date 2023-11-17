@@ -147,6 +147,14 @@ iframe {
     align-items: center;
 }
 
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
 /* Footer */
 footer {
     background-color: rgb(29 77 114);
