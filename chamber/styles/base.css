@@ -13,10 +13,11 @@ header {
 
 h1 {
     margin: 0;
+    font-size: 18px;
 }
 
-#chamberOfCommerce {
-    font-size: 16px;
+.titles h1::first-line {
+    font-size: 24px;
 }
 
 /* Style all font icons */
