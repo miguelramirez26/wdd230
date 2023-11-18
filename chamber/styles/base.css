@@ -377,10 +377,6 @@ section {
 	margin: .8rem;
 }
 
-.grid h3 {
-	
-}
-
 .list {
 	display: flex;
 	flex-direction: column;
@@ -422,4 +418,47 @@ section a {
 	font-size: 0.85rem;
 	color: navy;
 	letter-spacing: 1.1pt;
+}
+
+/* --- WEATHER --- */
+
+#weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#forecast {
+    display: grid;
+    justify-content: center;
+    text-align: left;
+}
+
+/* --- BANNER --- */
+.banner {
+    background-color: #f2f2f2; 
+    color: #000; 
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+#closeBannerBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }

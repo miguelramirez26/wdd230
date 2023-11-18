@@ -65,3 +65,34 @@ modeButton.addEventListener("click", () => {
 
 // Time Stamp
 document.getElementById('timestamp').value = new Date().toUTCString();
+
+// --- BANNER ---
+// Attach event listener to close button
+const closeButton = document.getElementById('closeBannerBtn');
+closeButton.addEventListener('click', function () {
+	closeBanner();
+});
+
+function closeBanner() {
+    const banner = document.getElementById('chamberBanner');
+    banner.style.display = 'none';
+}
+
+function getCurrentDay() {
+    const currentDate = new Date();
+    const currentDay = currentDate.getDay();
+    return currentDay;
+}
+
+function displayBanner() {
+    const currentDay = getCurrentDay();
+
+    // If the current day is Monday, Tuesday, or Wednesday
+    if (currentDay === 1 || currentDay === 2 || currentDay === 3) {
+        const banner = document.getElementById('chamberBanner');
+        banner.style.display = 'block';
+    }
+}
+
+// Call this function to check and display the banner as per the requirement
+displayBanner();

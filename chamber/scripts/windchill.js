@@ -9,7 +9,7 @@ function calculateWindChill(temperature, windSpeed) {
 }
 
 // Get temperature and wind speed elements
-const temperatureElement = document.getElementById("currentTemperature");
+const temperatureElement = document.getElementById("current-temp");
 const windSpeedElement = document.getElementById("currentWindSpeed");
 
 // Extract temperature and wind speed values

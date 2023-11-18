@@ -63,6 +63,12 @@
                 <a href="#">Join the Chamber</a>
             </div>
         </div>
+
+        <div id="chamberBanner" class="banner">
+            <p>Join us for the Chamber of Commerce Meet and Greet on Wednesday at 7:00 p.m.! 🌟</p>
+            <button id="closeBannerBtn" onclick="closeBanner()">❌ Close</button>        
+        </div>
+
         <div class="card-container">
             <section class="card">
                 <h3>Events</h3>
@@ -74,7 +80,15 @@
             <section class="card">
                 <h3>Weather</h3>
                 <p>Location: [Location Information]</p>
-                <p>Temperature: <span id="currentTemperature">50</span> ºF</p>
+                <div id="weather">
+                    <p><span id="current-temp"></span></p>
+                    <figure>
+                        <img id="weather-icon" src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </div>
+                <div id="forecast">
+                </div>  
                 <p>Wind Speed: <span id="currentWindSpeed">5.0</span> mph</p>
                 <p id="windChillValue"></p>
                 <p>Visits: [Number of Visits]</p>
@@ -142,5 +156,6 @@
     </footer>    
     <script src="scripts/script.js"></script>
     <script src="scripts/windchill.js"></script>
+    <script src="scripts/weather.js"></script>
 </body>
 </html>
