@@ -78,6 +78,7 @@ function closeBanner() {
     banner.style.display = 'none';
 }
 
+// Get the current day
 function getCurrentDay() {
     const currentDate = new Date();
     const currentDay = currentDate.getDay();
@@ -94,5 +95,4 @@ function displayBanner() {
     }
 }
 
-// Call this function to check and display the banner as per the requirement
 displayBanner();
