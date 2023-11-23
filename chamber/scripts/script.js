@@ -96,3 +96,56 @@ function displayBanner() {
 }
 
 displayBanner();
+
+// --- SPOTLIGHT INFO ---
+const fetchData = async () => {
+	try {
+		const response = await fetch('chamber/members.json');
+		const data = await response.json();
+		return data.companies;
+	} catch (error) {
+		console.error('Error fetching data:', error);
+	}
+}
+
+// Function to filter members by status
+const filterMembersByStatus = (members, status) => {
+	return members.filter(member => member.membershiplevel === status);
+};
+
+// Function to randomly select members
+const getRandomMembers = (members, count) => {
+	const randomMembers = [];
+	while (randomMembers.length < count && members.length > 0) {
+		const randomIndex = Math.floor(Math.random() * members.length);
+		randomMembers.push(members.splice(randomIndex, 1)[0]);
+	}
+	return randomMembers;
+};
+
+// Function to display spotlight information
+const displaySpotlight = async () => {
+	const chamberMembers = await fetchData();
+
+	// Filter silver and gold members
+	const silverGoldMembers = filterMembersByStatus(chamberMembers, 2); // Assuming 2 is silver and 3 is gold
+
+	// Randomly select two or three members
+	const selectedMembers = getRandomMembers(silverGoldMembers, Math.floor(Math.random() * 2) + 2);
+
+	// Display spotlight information
+	const spotlightContainer = document.getElementById('spotlight-container');
+	spotlightContainer.innerHTML = '';
+
+	selectedMembers.forEach(member => {
+		const memberDiv = document.createElement('div');
+		memberDiv.innerHTML = `
+			<h3>${member.name}</h3>
+			<p>Address: ${member.address}</p>
+			<p>Phone: ${member.phone}</p>
+			<p>Website: <a href="${member.websiteurl}" target="_blank">${member.websiteurl}</a></p>
+			<img src="${member.imageurl}" alt="${member.name}" style="max-width: 100px;">
+		`;
+		spotlightContainer.appendChild(memberDiv);
+	});
+};
