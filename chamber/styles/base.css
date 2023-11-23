@@ -267,7 +267,7 @@ span#currentYear::after {
 /* --------FORM------- */
 .main-content {
     text-align: left;
-    margin: 20px;
+    padding: 0;
 }
 
 .main-content h1 {
