@@ -149,4 +149,12 @@
     .footer-content img {
         padding-left: 10px;
     }
+
+    form {
+        margin-right: 1rem;
+    }
+
+    table {
+        margin-left: 1rem;
+    }
 }
