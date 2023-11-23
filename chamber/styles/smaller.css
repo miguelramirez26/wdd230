@@ -193,7 +193,16 @@
         letter-spacing: 1.1pt;
     }
 
+    /* --- Join --- */
     .container {
         display: block;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    table {
+        margin: 1rem 0;
     }
 }
