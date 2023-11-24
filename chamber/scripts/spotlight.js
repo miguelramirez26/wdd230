@@ -1,11 +1,18 @@
-// --- SPOTLIGHT INFO ---
 const url = 'https://miguelramirez26.github.io/wdd230/chamber/data/members.json';
 const spotlightContainer = document.querySelector('.spotlight-container');
 
-const displayCompanies = (companies) => {
-    const filteredCompanies = companies.filte(company => company.membershiplevel === 2 || company.membershiplevel === 3);
+const displayRandomCompanies = (companies) => {
+    // Filter companies with silver (2) or gold (3) membership level
+    const silverGoldCompanies = companies.filter(company => company.membershiplevel === 2 || company.membershiplevel === 3);
 
-    filteredCompanies.forEach((company) => {
+    // Shuffle the array to get a random order
+    const shuffledCompanies = shuffleArray(silverGoldCompanies);
+
+    // Select two to three companies
+    const selectedCompanies = shuffledCompanies.slice(0, Math.min(3, shuffledCompanies.length));
+
+    // Display the selected companies
+    selectedCompanies.forEach((company) => {
         let card = document.createElement('section');
         let name = document.createElement('h2');
         let address = document.createElement('p');
@@ -34,10 +41,19 @@ const displayCompanies = (companies) => {
     });
 }
 
+// Function to shuffle an array
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 async function getCompanyData() {
     const response = await fetch(url);
     const data = await response.json();
-    displayCompanies(data.companies);
+    displayRandomCompanies(data.companies);
 }
 
 getCompanyData();
