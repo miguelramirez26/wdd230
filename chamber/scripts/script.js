@@ -97,4 +97,3 @@ function displayBanner() {
 
 displayBanner();
 
-// --- SPOTLIGHT INFO ---
