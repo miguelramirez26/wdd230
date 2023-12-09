@@ -183,26 +183,25 @@ footer {
 
 /* RENTALS PAGE */
 /* Pricing Table styles */
-table {
-    margin: 10px auto;
-    border: thin solid #555;
-    box-shadow: 0 0 10px #555;
-    border-collapse: collapse;
-    width: 100%;
+#pricing-table {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
 }
 
 caption {
     padding: 10px;
-    caption-side: bottom;
+    caption-side: top;
+    background-color: #333;
     color: #f5f5f5;
-    font-size: .85rem;
+    font-size: x-large;
 }
 
 thead th {
     background-color: #333;
     color: white;
     padding: 10px;
-    text-align: left;
 }
 
 tbody tr:nth-child(even) {
@@ -222,10 +221,6 @@ th {
 th:first-child {
     background-color: #333;
     border: none;
-}
-
-td {
-    text-align: left;
 }
 
 /* RESERVATIONS PAGE */

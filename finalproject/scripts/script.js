@@ -1,5 +1,5 @@
 const url = 'https://raw.githubusercontent.com/miguelramirez26/wdd230/main/finalproject/data/pricing.json';
-const pricingTable = document.querySelector('#pricing');
+const pricingTable = document.querySelector('#pricing-table');
 
 const displayPricing = (pricingData) => {
   // Create caption element for the table
@@ -16,21 +16,29 @@ const displayPricing = (pricingData) => {
   // Create thead rows and cells
   let theadRow1 = document.createElement('tr');
   let theadRow2 = document.createElement('tr');
+
+  // Create header cells with rowspan and colspan
   let rentalTypeTh = document.createElement('th');
-  let maxPersonsTh = document.createElement('th');
-  let reservationTh = document.createElement('th');
-  let walkInTh = document.createElement('th');
-
   rentalTypeTh.textContent = 'Rental Type';
-  maxPersonsTh.textContent = 'Max. Persons';
-  reservationTh.textContent = 'Reservation';
-  walkInTh.textContent = 'Walk-In';
-
+  rentalTypeTh.setAttribute('rowspan', '2'); // Add rowspan attribute
   theadRow1.appendChild(rentalTypeTh);
+
+  let maxPersonsTh = document.createElement('th');
+  maxPersonsTh.textContent = 'Max. Persons';
+  maxPersonsTh.setAttribute('rowspan', '2'); // Add rowspan attribute
   theadRow1.appendChild(maxPersonsTh);
+
+  let reservationTh = document.createElement('th');
+  reservationTh.textContent = 'Reservation';
+  reservationTh.setAttribute('colspan', '2'); // Add colspan attribute
   theadRow1.appendChild(reservationTh);
+
+  let walkInTh = document.createElement('th');
+  walkInTh.textContent = 'Walk-In';
+  walkInTh.setAttribute('colspan', '2'); // Add colspan attribute
   theadRow1.appendChild(walkInTh);
 
+  // Create thead row for pricing details
   theadRow2.innerHTML = '<th>Half Day (3 hrs)</th><th>Full Day</th><th>Half Day (3 hrs)</th><th>Full Day</th>';
 
   thead.appendChild(theadRow1);
@@ -50,10 +58,10 @@ const displayPricing = (pricingData) => {
 
     rentalTypeCell.textContent = `${rental}`;
     maxPersonsCell.textContent = `${pricingData.max_persons[index]}`;
-    reservationPricingCell1.textContent = `${pricingData.reservation_pricing[index].half_day}`;
-    reservationPricingCell2.textContent = `${pricingData.reservation_pricing[index].full_day}`;
-    maxRentalPricingCell1.textContent = `${pricingData.walk_in_pricing[index].half_day}`;
-    maxRentalPricingCell2.textContent = `${pricingData.walk_in_pricing[index].full_day}`;
+    reservationPricingCell1.textContent = `$${pricingData.reservation_pricing[index].half_day}`;
+    reservationPricingCell2.textContent = `$${pricingData.reservation_pricing[index].full_day}`;
+    maxRentalPricingCell1.textContent = `$${pricingData.walk_in_pricing[index].half_day}`;
+    maxRentalPricingCell2.textContent = `$${pricingData.walk_in_pricing[index].full_day}`;
 
     row.appendChild(rentalTypeCell);
     row.appendChild(maxPersonsCell);
@@ -67,7 +75,7 @@ const displayPricing = (pricingData) => {
 
   // Append tbody to the table
   pricingTable.appendChild(tbody);
-}
+};
 
 async function getPricingData() {
   try {
