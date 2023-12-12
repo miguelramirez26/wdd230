@@ -9,7 +9,7 @@
     <meta name="author" content="Miguel Ramirez">
     
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🛵</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='10 0 100 100'%3E%3Ctext y='.90em' font-size='90'%3E🛵%3C/text%3E%3C/svg%3E">
 
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -87,16 +87,14 @@
         <!-- Weather Section -->
         <section id="weather">
             <div class="weather-info">
-                <h2></h2>
-                <div id="weather">
-                    <p><span id="current-temp"></span></p>
-                    <p><span id="current-humidity"></span></p>
-                    <figure>
-                        <img id="weather-icon" src="" alt="">
-                        <figcaption></figcaption>
-                    </figure>
-                    <p><span id="todayInfo"></span></p>
-                </div>
+                <h2 id="city-country"></h2>
+                <p><span id="current-temp"></span></p>
+                <p><span id="current-humidity"></span></p>
+                <figure>
+                    <img id="weather-icon" src="" alt="">
+                    <figcaption></figcaption>
+                </figure>
+                <p><span id="todayInfo"></span></p>
             </div>
         
             <div class="weather-forecast">

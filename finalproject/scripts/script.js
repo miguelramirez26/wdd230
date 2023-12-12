@@ -16,7 +16,6 @@ async function apiFetch() {
         if (response.ok) {
             const data = await response.json();
             displayResults(data);
-
             updateLocationName(data.name, data.sys.country);
         } else {
             throw Error(await response.text());
@@ -25,6 +24,8 @@ async function apiFetch() {
         console.log(error);
     }
 }
+
+
 
 function displayResults(data) {
     // Display current temp
@@ -35,8 +36,12 @@ function displayResults(data) {
     currentHumidityElement.textContent = `Humidity: ${data.main.humidity}%`;
 
     // Display weather icon and description
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    const iconsrc = 'https://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
     let desc = capitalizeEachWord(data.weather[0].description);
+
+    // Debugging statements
+    console.log(data.weather[0].icon); // Check the icon value
+    console.log(iconsrc); // Check the generated iconsrc
 
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
@@ -51,7 +56,7 @@ function displayResults(data) {
 }
 
 function updateLocationName(city, country) {
-    const locationElement = document.querySelector('#weather h2')
+    const locationElement = document.querySelector('#city-country')
     locationElement.textContent = `${city}, ${country}`;
 }
 

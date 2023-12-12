@@ -484,7 +484,7 @@ button:hover {
 .main-thanks-contact {
     display: block;
     text-align: center;   
-    margin: 50px; 
+    margin: 50px auto; 
 }
 
 .main-thanks-reservations h1,
