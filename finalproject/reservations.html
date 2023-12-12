@@ -29,7 +29,7 @@
 <body>
 
     <header>
-        <h1>Scoots</h1>
+        <h1><a href="index.html" class="nav-link">Scoots</a></h1>
         <nav>
             <a href="index.html" class="nav-link">Home</a>
             <a href="rentals.html" class="nav-link">Rentals</a>
@@ -39,67 +39,70 @@
         </nav>
     </header>
 
-    <!-- Rental Services Section -->
-    <section id="rental-services">
-        <h2>Rental Services and Agreements</h2>
-        <ul>
-            <li>A $50 security deposit is required to confirm reservations.</li>
-            <li>A valid driver's license is required in hand at the time of rental.</li>
-            <li>No one under the age of 12 years of age is allowed to ride on the scooters.</li>
-            <li>Fuel charge is not included.</li>
-            <li>Unlimited mileage.</li>
-            <li>Liability insurance is included.</li>
-            <li>Damage insurance is available for purchase.</li>
-            <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
-            <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
-            <li>Rentals may be returned to either physical location.</li>
-        </ul>
-    </section>
+    <main>
+        <!-- Rental Services Section -->
+        <section id="rental-services">
+            <h2>Rental Services and Agreements</h2>
+            <ul>
+                <li>A $50 security deposit is required to confirm reservations.</li>
+                <li>A valid driver's license is required in hand at the time of rental.</li>
+                <li>No one under the age of 12 years of age is allowed to ride on the scooters.</li>
+                <li>Fuel charge is not included.</li>
+                <li>Unlimited mileage.</li>
+                <li>Liability insurance is included.</li>
+                <li>Damage insurance is available for purchase.</li>
+                <li>Free delivery to Cozumel hotels or Airbnbs for 2+ day rentals.</li>
+                <li>Payment via Google Pay, Apple Pay, cash, credit card, debit card, or Venmo.</li>
+                <li>Rentals may be returned to either physical location.</li>
+            </ul>
+        </section>
 
-    <form>
-        <fieldset>
-            <legend>Rental Details</legend>
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
+        <form action="thanks-reservations.html" method="get">
+            <fieldset>
+                <legend>Rental Details</legend>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
 
-            <label for="period">Rental Period:</label>
-            <select id="period" name="period" required>
-                <option value="half-day">Half Day</option>
-                <option value="full-day">Full Day</option>
-                <option value="multiple-days">Multiple Days</option>
-            </select>
+                <label for="period">Rental Period:</label>
+                <select id="period" name="period" required>
+                    <option value="half-day">Half Day</option>
+                    <option value="full-day">Full Day</option>
+                    <option value="multiple-days">Multiple Days</option>
+                </select>
 
-            <label for="rental-type">Rental Type:</label>
-            <select id="rental-type" name="rental-type" required>
-                <option value="scooter">Scooter</option>
-                <option value="jeep">Jeep</option>
-                <option value="atv">ATV</option>
-            </select>
+                <label for="rental-type">Rental Type:</label>
+                <select id="rental-type" name="rental-type" required>
+                    <option value="scooter">Scooter</option>
+                    <option value="jeep">Jeep</option>
+                    <option value="atv">ATV</option>
+                </select>
 
-            <label for="number">Number of Rentals:</label>
-            <input type="number" id="number" name="number" required>
+                <label for="number">Number of Rentals:</label>
+                <input type="number" id="number" name="number" required>
 
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="1235551234" required>
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="someone@gmail.com" required>
 
-            <label for="location">Home State or Country:</label>
-            <input type="text" id="location" name="location" required>
+                <label for="location">Home State or Country:</label>
+                <input type="text" id="location" name="location" required>
 
-            <label for="cruise-line">Cruise Line (if applicable):</label>
-            <input type="text" id="cruise-line" name="cruise-line">
+                <label for="cruise-line">Cruise Line (if applicable):</label>
+                <input type="text" id="cruise-line" name="cruise-line">
 
-            <label for="comments">Special Accommodations/Comments:</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
+                <label for="comments">Special Accommodations/Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
 
-            <button type="submit">Send</button>
-        </fieldset>
-    </form>
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+    </main>
+    
 
     <footer>
         <div class="footer-container">

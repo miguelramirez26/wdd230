@@ -12,7 +12,48 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-/* Header styles */
+/* Closeable Message styles*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#closeable-message {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    /* display: none; */
+    position: relative;
+    animation: fadeIn .7s ease-in-out;
+}
+
+#close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #721c24;
+    transform: translateY(-50%);
+}
+
+#close-button:hover {
+    color: white;
+}
+
+#message-content {
+    margin-top: 10px;
+}
+
+/* Header Section styles */
 header {
     background-color: #333;
     color: white;
@@ -23,6 +64,12 @@ header {
 header h1 {
     margin: 0;
     padding: .7rem;
+}
+
+h1:first-child a:hover {
+    background-color: transparent; /* Remove hover effect for the first child anchor (Scoots) */
+    color: #ff6600;
+    transition: color 0.3s ease;
 }
 
 nav {
@@ -111,12 +158,59 @@ nav a {
     background-color: #e55d00;
 }
 
-/* Weather styles */
+main {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Types of Rentals Section styles */
+#rentals {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+#rentals h2 {
+    text-align: center;
+}
+
+.rental-category {
+    margin: 20px;
+}
+
+/* Weather Section styles */
 #weather {
     background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+}
+
+.forecast-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: calc(33.33% - 20px); 
+    text-align: center;
 }
 
 .weather-info,
@@ -130,16 +224,23 @@ nav a {
     margin-bottom: 10px;
 }
 
-#current-weather,
-#forecast {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 .weather-info p,
 .weather-forecast p {
     margin: 10px 0;
+}
+
+#current-temp {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#weather-icon {
+    margin-top: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
 }
 
 /* Footer styles */
@@ -193,9 +294,10 @@ footer {
 caption {
     padding: 10px;
     caption-side: top;
-    background-color: #333;
-    color: #f5f5f5;
+    background-color: #ff6600;
+    color: white;
     font-size: x-large;
+    font-weight: bold;
 }
 
 thead th {
@@ -227,10 +329,10 @@ th:first-child {
 /* Rental Services and Agreements Section styles */
 #rental-services {
     background-color: #f9f9f9;
-    padding: 40px 0;
+    margin: 20px 0;
+    padding: 20px;
     text-align: left;
-    display: grid;
-    justify-content: center;
+    max-width: 400px;
 }
 
 #rental-services h2 {
@@ -245,7 +347,7 @@ th:first-child {
 
 #rental-services li {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     position: relative;
     padding-left: 20px; 
 }
@@ -267,17 +369,11 @@ th:first-child {
     color: #e55d00;
 }
 
- /* Form styles using CSS Grid */
-form {
-    display: grid;
-    justify-content: center;
-    margin: 0 auto;
-}
-
 form fieldset {
     margin: 2rem 0;
     border: 1px solid #000;
     border-radius: .5rem;
+    margin: 20px 0;
 }
 
 form legend {
@@ -321,8 +417,7 @@ button:hover {
 /* CONTACT PAGE */
 /* Contact Section styles */
 #contact {
-    background-color: #f9f9f9;
-    padding: 40px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -345,7 +440,7 @@ iframe {
     border: 0;
 }
 
-/* Contact form styles */
+/* Contact Form styles */
 #contactForm {
     max-width: 600px;
     margin: 0 auto;
@@ -381,4 +476,24 @@ button {
 
 button:hover {
     background-color: #e55d00;
+}
+
+/* THANKS RESERVATIONS AND CONTACT PAGES */
+/* Thank You Message Styles */
+.main-thanks-reservations,
+.main-thanks-contact {
+    display: block;
+    text-align: center;   
+    margin: 50px; 
+}
+
+.main-thanks-reservations h1,
+.main-thanks-contact h1 {
+    color: #ff6600;
+}
+
+.thank-you-message {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #333;
 }

@@ -30,7 +30,7 @@
 <body>
 
     <header>
-        <h1>Scoots</h1>
+        <h1><a href="index.html" class="nav-link">Scoots</a></h1>
         <nav>
             <a href="index.html" class="nav-link">Home</a>
             <a href="rentals.html" class="nav-link">Rentals</a>
@@ -40,38 +40,40 @@
         </nav>
     </header>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-info">
-            <h2>Contact Us</h2>
-            <p>Email: info@scoots.com</p>
-            <p>Phone: +1 (123) 456-7890</p>
-        </div>
-
-        <div class="google-map">
-            <!-- Add a container for the Google Map -->
-            <div id="map">
-                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1BQ5ATxVK4awdYW1T1OXYuRXJY3osLiI&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+    <main>
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Email: info@scoots.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
             </div>
-        </div>
 
-            <form action="#" method="post" id="contactForm">
-                <fieldset>
-                    <legend>Contact Details</legend>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="google-map">
+                <!-- Add a container for the Google Map -->
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1BQ5ATxVK4awdYW1T1OXYuRXJY3osLiI&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+                </div>
+            </div>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                <form action="thanks-contact.html" method="get" id="contactForm">
+                    <fieldset>
+                        <legend>Contact Details</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
 
-                    <label for="comment">Comment:</label>
-                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="someone@gmail.com" required>
 
-                    <button type="submit">Send</button>
-                </fieldset>
-                
-            </form>
-    </section>
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" name="comment" rows="4" required></textarea>
+
+                        <button type="submit">Send</button>
+                    </fieldset>
+                    
+                </form>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-container">
