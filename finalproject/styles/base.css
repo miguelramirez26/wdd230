@@ -31,7 +31,6 @@ body {
     text-align: center;
     /* display: none; */
     position: relative;
-    animation: fadeIn .7s ease-in-out;
 }
 
 #close-button {
@@ -49,12 +48,25 @@ body {
     color: #555;
 }
 
-#message-content {
-    margin-top: 10px;
+/* Header Section styles */
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-/* Header Section styles */
+.logo-container img {
+    width: 48px;
+    filter: brightness(0) invert(1);
+}
+
+.logo-container img:hover {
+    filter: brightness(1) invert(0);
+    transition: filter .3s ease;
+}
+
 header {
+    display: flex;
+    justify-content: space-around;
     background-color: #333;
     color: white;
     padding: 10px;
@@ -66,10 +78,10 @@ header h1 {
     padding: .7rem;
 }
 
-h1:first-child a:hover {
-    background-color: transparent; /* Remove hover effect for the first child anchor (Scoots) */
+h1 a:hover {
+    background-color: transparent !important;
     color: #ffaa33;
-    transition: color 0.3s ease;
+    transition: color .3s ease;
 }
 
 nav {
@@ -90,7 +102,7 @@ nav a {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color .3s ease;
 }
 
 .nav-link.active {
@@ -122,14 +134,13 @@ nav a {
     opacity: .7;
 }
 
-
-/* Carousel styles */
-.carousel {
-   
+/* CTA styles */
+section {
+    position: relative;
 }
 
-
 .cta {
+    background-color: white;
     text-align: center;
     padding: 20px;
 }
@@ -144,7 +155,7 @@ nav a {
     margin-bottom: 20px;
 }
 
-.cta a {
+.cta a.cta-link {
     display: inline-block;
     background-color: #ffaa33;
     color: #000;
@@ -152,10 +163,52 @@ nav a {
     text-decoration: none;
     font-size: 1.2em;
     border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .cta a:hover {
     background-color: #ff8800;;
+}
+
+/* Carousel styles */
+.carousel {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 400%;
+    display: flex;
+    animation: slide 16s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25%, 30% {
+        transform: translateX(0);
+    }
+    50%, 55% {
+        transform: translateX(-25%);
+    }
+    75%, 80% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(-75%);
+    }
+}
+
+.wrapper img {
+    width: 25%;
+    object-fit: cover;
 }
 
 main {
@@ -262,9 +315,19 @@ footer {
     text-align: center;
 }
 
+.footer-info .logo-container {
+    display: block;
+}
+
 .footer-info h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+}
+
+h3 a:hover {
+    background-color: transparent !important;
+    color: #ffaa33;
+    transition: color .3s ease;
 }
 
 .footer-info p {
@@ -279,11 +342,45 @@ footer {
 
 .copyright {
     margin-top: 20px;
-    font-size: 0.8em;
+    font-size: .8em;
 }
 
 /* RENTALS PAGE */
 /* Pricing Table styles */
+#image-container {
+    text-align: center;
+}
+
+#image-container figure:first-child img {
+    width: 120px;
+    height: auto;
+}
+
+#image-container figure:nth-child(2) img {
+    width: 100px;
+    height: auto;
+}
+
+#image-container figure:nth-child(3) img {
+    width: 150px;
+    height: auto;
+}
+
+#image-container figure:nth-child(4) img {
+    width: 150px;
+    height: auto;
+}
+
+#image-container figure:nth-child(5) img {
+    width: 150px;
+    height: auto;
+}
+
+#image-container figure:last-child img {
+    width: 170px;
+    height: auto;
+}
+
 #pricing-table {
     margin: 20px auto;
     padding: 20px;

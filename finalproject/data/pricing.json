@@ -23,5 +23,13 @@
     { "half_day": 60, "full_day": 80 },
     { "half_day": 85, "full_day": 125 },
     { "half_day": 70, "full_day": 90 }
+  ],
+  "images": [
+    "images/hondametroscooter.webp",
+    "images/hondadioscooter.webp",
+    "images/hondapcx150scooter.webp",
+    "images/hondapioneeratv.webp",
+    "images/jeepwrangler4door.webp",
+    "images/jeepwrangler2door.webp"
   ]
 }
