@@ -191,6 +191,7 @@ const displayPricing = (pricingData) => {
     image.alt = rental;
     image.className = 'rental-image';
     image.id = `rental-image-${index + 1}`;
+    image.loading = 'lazy';
 
     // Add the image to the 'Rental Type' cell
     rentalTypeCell.appendChild(image);
