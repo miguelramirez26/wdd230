@@ -107,6 +107,7 @@ nav a {
 
 .nav-link.active {
     text-decoration: underline;
+    color: #ffaa33;
 }
 
 .nav-link:hover {
@@ -220,12 +221,15 @@ main {
 }
 
 /* Types of Rentals Section styles */
-#rentals {
+#rentals,
+#weather {
     background-color: #f5f5f5;
     padding: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+    border-radius: 10px;
 }
 
 #rentals h2 {
@@ -238,12 +242,7 @@ main {
 
 /* Weather Section styles */
 #weather {
-    background-color: #f5f5f5;
-    padding: 20px;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    max-width: 400px;
 }
 
 .forecast-container {
@@ -347,38 +346,28 @@ h3 a:hover {
 
 /* RENTALS PAGE */
 /* Pricing Table styles */
-#image-container {
-    text-align: center;
-}
-
-#image-container figure:first-child img {
-    width: 120px;
-    height: auto;
-}
-
-#image-container figure:nth-child(2) img {
+#rental-image-1 {
     width: 100px;
-    height: auto;
 }
 
-#image-container figure:nth-child(3) img {
-    width: 150px;
-    height: auto;
+#rental-image-2 {
+    width: 90px;
 }
 
-#image-container figure:nth-child(4) img {
-    width: 150px;
-    height: auto;
+#rental-image-3 {
+    width: 120px;
 }
 
-#image-container figure:nth-child(5) img {
-    width: 150px;
-    height: auto;
+#rental-image-4 {
+    width: 110px;
 }
 
-#image-container figure:last-child img {
-    width: 170px;
-    height: auto;
+#rental-image-5 {
+    width: 120px;
+}
+
+#rental-image-6 {
+    width: 130px;
 }
 
 #pricing-table {
@@ -419,7 +408,6 @@ th {
 
 th:first-child {
     background-color: #333;
-    border: none;
 }
 
 /* RESERVATIONS PAGE */
@@ -430,6 +418,8 @@ th:first-child {
     padding: 20px;
     text-align: left;
     max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+    border-radius: 10px;
 }
 
 #rental-services h2 {
@@ -453,7 +443,7 @@ th:first-child {
     content: '\2022'; 
     position: absolute;
     left: 0;
-    color: #ff6600; 
+    color: #ffaa33;
 }
 
 form fieldset {
@@ -525,6 +515,8 @@ button:hover {
 
 iframe {
     border: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+    border-radius: 10px;
 }
 
 /* Contact Form styles */
@@ -562,11 +554,160 @@ textarea {
 
 .main-thanks-reservations h1,
 .main-thanks-contact h1 {
-    color: #ff6600;
+    color: #333;
 }
 
 .thank-you-message {
     font-size: 1.2em;
     margin-top: 20px;
     color: #333;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .cta {
+        position: static;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .cta-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .carousel {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        width: 400%;
+        display: flex;
+        animation: slide 16s infinite;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        25%, 30% {
+            transform: translateX(0);
+        }
+        50%, 55% {
+            transform: translateX(-50%);
+        }
+        75%, 80% {
+            transform: translateX(-95%);
+        }
+        100% {
+            transform: translateX(-145%);
+        }
+    }
+
+    .wrapper img {
+        flex: 1;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    #rentals,
+    #weather {
+        max-width: 400px;
+        margin: 20px 0;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    /* RENTALS PAGE */
+    #pricing-table {
+        width: 100%;
+        padding: 0; /* Reducir el relleno en pantallas pequeñas */
+        font-size: x-small;
+    }
+
+    caption {
+        font-size: large;
+    }
+
+    #rental-image-1 {
+        width: 50px;
+    }
+    
+    #rental-image-2 {
+        width: 45px;
+    }
+    
+    #rental-image-3 {
+        width: 60px;
+    }
+    
+    #rental-image-4 {
+        width: 55px;
+    }
+    
+    #rental-image-5 {
+        width: 60px;
+    }
+    
+    #rental-image-6 {
+        width: 65px;
+    }
+
+    /* CONTACT PAGE */
+    iframe {
+        width: 100%;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #rentals, 
+    #weather {
+        width: 300px;
+    }
+
+    #main-reservations {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    #rental-services,
+    form {
+        width: 80%;
+        max-width: none;
+    }
+
+    iframe {
+        width: 600px;
+    }
 }

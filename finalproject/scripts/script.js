@@ -25,8 +25,6 @@ async function apiFetch() {
     }
 }
 
-
-
 function displayResults(data) {
     // Display current temp
     currentTemp.textContent = `${data.main.temp.toFixed(0)}°F`;
@@ -188,7 +186,17 @@ const displayPricing = (pricingData) => {
     let maxRentalPricingCell1 = document.createElement('td');
     let maxRentalPricingCell2 = document.createElement('td');
 
-    rentalTypeCell.textContent = `${rental}`;
+    let image = document.createElement('img');
+    image.src = pricingData.images[index];
+    image.alt = rental;
+    image.className = 'rental-image';
+    image.id = `rental-image-${index + 1}`;
+
+    // Agregar la imagen a la celda de "Rental Type"
+    rentalTypeCell.appendChild(image);
+    rentalTypeCell.appendChild(document.createElement('br')); // Salto de línea para separar la imagen del texto
+    rentalTypeCell.appendChild(document.createTextNode(rental));
+
     maxPersonsCell.textContent = `${pricingData.max_persons[index]}`;
     reservationPricingCell1.textContent = `$${pricingData.reservation_pricing[index].half_day}`;
     reservationPricingCell2.textContent = `$${pricingData.reservation_pricing[index].full_day}`;
@@ -203,7 +211,7 @@ const displayPricing = (pricingData) => {
     row.appendChild(maxRentalPricingCell2);
 
     tbody.appendChild(row);
-  });
+});
 
   // Append tbody to the table
   pricingTable.appendChild(tbody);
