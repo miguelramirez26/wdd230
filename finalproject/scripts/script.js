@@ -192,9 +192,9 @@ const displayPricing = (pricingData) => {
     image.className = 'rental-image';
     image.id = `rental-image-${index + 1}`;
 
-    // Agregar la imagen a la celda de "Rental Type"
+    // Add the image to the 'Rental Type' cell
     rentalTypeCell.appendChild(image);
-    rentalTypeCell.appendChild(document.createElement('br')); // Salto de línea para separar la imagen del texto
+    rentalTypeCell.appendChild(document.createElement('br'));
     rentalTypeCell.appendChild(document.createTextNode(rental));
 
     maxPersonsCell.textContent = `${pricingData.max_persons[index]}`;
